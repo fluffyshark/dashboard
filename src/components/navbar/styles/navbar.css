@@ -1,0 +1,79 @@
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+}
+.navbar_left {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.navbar_left_logotype {
+    width: 125px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.navbar_center {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar_center>p {
+    width: auto;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+/*    background-color: #4873d3; */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navbar_right {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#navbar_mail {
+    width: 23px;
+    height: 23px;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#navbar_mail>img {width: 100%;}
+
+#navbar_bell {
+    width: 23px;
+    height: 23px;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 50px;
+    cursor: pointer;
+}
+#navbar_bell>img {height: 100%;}
+
+#navbar_profile {
+    width: auto;
+    height: 35px;
+    display: flex; align-items: center; 
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#navbar_profile>img {height: 100%;}
+#navbar_profile>p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+}

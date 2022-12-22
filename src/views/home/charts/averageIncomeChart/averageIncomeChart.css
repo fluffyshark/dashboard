@@ -1,0 +1,11 @@
+.lineChart03 {
+    width: 125px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lineChart03_chartStyle {
+    width: 125px;
+    height: 60px;
+}

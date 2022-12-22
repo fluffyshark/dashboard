@@ -1,0 +1,204 @@
+.homeBottomView {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* HOME BOTTOM TOP SECTION */
+
+.home_bottom_top {
+    width: 100%;
+    height: 95px;
+    display: flex;
+}
+.home_bottom_top_left {
+    width: 295px;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home_bottom_top_left>p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 5px;
+    transform: translateY(8px);
+}
+#home_bottom_dropdown {
+    width: 128px;
+    height: 38px;
+    background-color: white;
+    transform: translateY(9px);
+    border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+}
+#home_bottom_dropdown>p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+#home_bottom_dropdown>img {
+    height: 5px;
+    margin-left: 35px;
+}
+
+
+.home_bottom_top_right {
+    width: 105px;
+    height: 100%;
+    margin-left: 847px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#home_bottom_filter {
+    width: 105px;
+    height: 38px;
+    background-color: white;
+    transform: translateY(9px);
+    border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+}
+#home_bottom_filter>p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 11px;
+}
+#home_bottom_filter>img {
+    height: 11px;
+    
+}
+
+
+/* HOME BOTTOM BOTTOM SECTION */
+
+.home_bottom_bottom {
+    width: 100%;
+    height: calc(100% - 95px);
+
+}
+.home_bottom_client_constainer {
+    width: 65%;
+    height: 295px;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.home_bottom_client_top {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: #e5e9ec;
+    border-width: 0px 0px 1px 0px;
+
+}
+
+.home_bottom_client_wrapper {
+    width: 100%;
+    height: calc(100% - 55px);
+    
+    overflow: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+.home_bottom_client_wrapper::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+
+
+#home_category_name {margin-left: 26px;}
+
+.home_client_common {
+    height: 100%;
+    display: flex; align-items: center;  
+}
+
+.client_categories {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    transform: translateY(2px);
+    
+}
+.client_section {height: 100%; display: flex; align-items: center; }
+
+.client_category_name {width: 243px;}
+.client_category_progress {width: 153px;}
+.client_category_type { width: 124px;}
+.client_category_amount {width: 160px;}
+.client_category_contact {width: 221px;}
+.client_category_created {width: 174px;}
+.client_category_last_modified {width: 171px;}
+
+.client_category_name>p {margin-left: 25px;}
+
+.client_contact {margin-left: 5px;}
+
+
+.client_profile_pic {
+    height: 28px;
+    transform: translateY(3px);
+}
+
+.home_bottom_client_bottom {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: #e5e9ec;
+    border-width: 0px 0px 1px 0px;
+}
+
+#client_progress_box1 {
+    width: 70px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #4873d3;
+    transform: translateY(2px);
+    display: flex; justify-content: center; align-items: center;
+}
+#client_progress_box1>p {
+    font-size: 12px;
+    color: white;
+    transform: translateY(0px);
+}
+
+#client_progress_box2 {
+    width: 90px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #22c4ab;
+    transform: translateY(2px);
+    display: flex; justify-content: center; align-items: center;
+}
+#client_progress_box2>p {
+    font-size: 12px;
+    color: white;
+    transform: translateY(0px);
+}
+
+#client_progress_box3 {
+    width: 85px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #84d0f0;
+    transform: translateY(2px);
+    display: flex; justify-content: center; align-items: center;
+}
+#client_progress_box3>p {
+    font-size: 12px;
+    color: white;
+    transform: translateY(0px);
+}

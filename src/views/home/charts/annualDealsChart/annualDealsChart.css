@@ -1,0 +1,11 @@
+.annualDealsChart {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.annualDealsChart_chartStyle {
+    width: 100px;
+    height: 60px;
+}

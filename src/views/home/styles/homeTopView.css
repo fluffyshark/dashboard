@@ -1,0 +1,153 @@
+.homeTopView {
+    width: 100%;
+    height: 17.5%;
+/*    background-color: blue; */
+    
+    display: flex;
+    align-items: center;
+}
+.home_toptop_standard {
+    font-size: 11px;
+    font-weight: bold;
+    color: #afb4c1;
+    margin: 0;
+}
+.home_topbottom_standard {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.home_top_arrow_stat {
+    width: 180px;
+    height: 65px;
+    margin-left: 27px;
+}
+.home_top_arrow_stat_top {
+    width: 100%;
+    height: 22px;
+    display: flex; align-items: flex-end;
+}
+.home_top_arrow_stat_top>p {
+    margin: 0;
+}
+.home_top_arrow_stat_bottom {
+    width: 100%;
+    height: calc(100% - 22px);
+    display: flex;
+}
+.home_top_arrow_stat_bottom>p {margin: 0; margin-top: 3px;}
+.home_top_arrow_stat_bottom>img {height: 12px; transform: translateY(10px); margin-left: 10px; margin-top: 3px;}
+
+
+#home_top_annual_profit {margin-left: 63px;}
+#home_top_average_income {margin-left: 103px;}
+
+
+.home_top_graph_stat {
+    width: 250px;
+    height: 65px; 
+    margin-left: 27px;
+    display: flex;
+}
+.home_top_graph_stat_part {
+    width: 125px;
+    height: 100%;
+}
+.home_top_graph_stat_top {
+    width: 125px;
+    height: 22px;
+    display: flex; align-items: flex-end;
+}
+.home_top_graph_stat_top>p {
+    margin: 0;
+}
+.home_top_graph_stat_bottom {
+    width: 125px;
+    height: calc(100% - 22px);
+    display: flex;
+}
+.home_top_graph_stat_bottom>p {margin: 0; margin-top: 3px;}
+
+.home_top_graph_graph_part {
+    width: calc(100% - 125px);
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.home_top_graph_graph_part>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4873d3;
+    position: absolute; top: 5px; left: 35px;
+}
+
+
+/*------------LEAD CONVERSION-------------*/
+
+.home_top_lead_conversion {
+    width: 115px;
+    height: 65px;
+    margin-left: 55px;
+}
+.home_top_lead_conversion_stat_top {
+    width: 100%;
+    height: 22px;
+    display: flex; align-items: flex-end;
+}
+.home_top_lead_conversion_stat_top>p {
+    margin: 0;
+}
+.home_top_lead_conversion_stat_bottom {
+    width: 100%;
+    height: calc(100% - 22px);
+    display: flex;
+}
+.home_top_lead_conversion_stat_bottom>p {margin: 0; margin-top: 3px;}
+.home_top_lead_conversion_stat_bottom>img {height: 12px; transform: translateY(10px); margin-left: 10px; margin-top: 3px;}
+
+/*------------ANNUAL DEALS-------------*/
+
+.home_top_annual_deals {
+    width: 250px;
+    height: 65px; 
+    margin-left: 75px;
+    display: flex;
+}
+.home_top_annual_deals_stat_part {
+    width: 120px;
+    height: 100%;
+}
+.home_top_annual_deals_stat_top {
+    width: 120px;
+    height: 22px;
+    display: flex; align-items: flex-end;
+}
+.home_top_annual_deals_stat_top>p {
+    margin: 0;
+}
+.home_top_annual_deals_stat_bottom {
+    width: 120px;
+    height: calc(100% - 22px);
+    display: flex;
+}
+.home_top_annual_deals_stat_bottom>p {margin: 0; margin-top: 3px;}
+
+.home_top_annual_deals_graph_part {
+    width: calc(100% - 120px);
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.home_top_annual_deals_graph_part>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f75454;
+    position: absolute; top: 5px; left: 35px;
+}
+

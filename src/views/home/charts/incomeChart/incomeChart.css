@@ -1,0 +1,78 @@
+.incomeChart {
+    width: 447px;
+    height: 308px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+    margin-left: 30px;
+    background-color: white;
+}
+.incomeChart_top {
+    width: 100%;
+    height: 44px;
+    display: flex;
+}
+.barChart3_top_left {
+    width: 50%;
+    height: 100%;
+}
+.incomeChart_top_title {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 28px 0px 0px 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.incomeChart_center {
+    width: 400px;
+    height: 216px;
+    display: flex;
+    justify-content: center;
+}
+
+.incomeChart_chartStyle {
+    width: 410px;
+    height: 170px;
+    margin-left: 32px;
+    margin-top: 28px;
+}
+
+.incomeChart_bottom {
+    width: 100%;
+    height: calc(100% - 170px - 90px);
+    border-style: solid;
+    border-color: #e5e9ec;
+    border-width: 1px 0px 0px 0px;
+    display: flex; justify-content: center;
+}
+.incomeChart_bottom_legend_container {
+    width: 250px;
+    height: 100%;
+    display: flex;
+}
+.incomeChart_bottom_legend {
+    width: 50%;
+    height: 100%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.incomeChart_bottom_legend>p {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    margin-left: 7px;
+}
+
+#legend_instant_income {
+    background-color: #4873d3;
+    width: 17px;
+    height: 4px;
+    border-radius: 10px;
+}
+#legend_predict_borrow {
+    background-color: #a8def4;
+    width: 17px;
+    height: 4px;
+    border-radius: 10px;
+}
