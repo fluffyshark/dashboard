@@ -2,11 +2,6 @@
     width: 100%;
     height: calc(100% - 100px); /* 100px being Navbar height */
     background-color: #eff3f5; 
-/*
-    background-image: url("../MALLBackground.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-*/
 }
 
 .home_top {
@@ -25,6 +20,7 @@
     width: 100%;
     height: 35.5%;
     display: flex;
+    justify-content: space-between;
 }
 
 
