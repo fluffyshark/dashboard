@@ -22,7 +22,7 @@
     justify-content: space-between;
 
     @media screen and (min-height: 970px) { height: calc(100% - 345px);}
-    @media screen and (max-height: 969px) { height: 66px}
+    @media screen and (max-height: 969px) { height: 50px}
 
 }
 .home_bottom_top_left {
@@ -120,6 +120,10 @@
     background-color: white;
     margin-left: 20px;
     border-radius: 10px;
+
+    @media screen and (max-height: 819px) { 
+        height: calc(100% - 70px);
+    }
 }
 .home_bottom_client_top {
     @include flexCenter(space-between);
@@ -189,6 +193,10 @@
     border-style: solid;
     border-color: #e5e9ec;
     border-width: 0px 0px 1px 0px;
+
+    @media screen and (max-height: 819px)  {
+        height: 45px;
+    } 
 }
 
 #client_progress_box1 {

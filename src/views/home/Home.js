@@ -10,19 +10,24 @@ import HomeBottomView from './HomeBottomView'
 function Home() {
   return (
     <div className='home'>
+      <div className="home_container">
         <div className="home_top">
           <HomeTopView />
         </div>
 
         <div className="home_middle">
-          <BalanceOverviewChart />
-          <IncomeChart />
-          <DealTypeChart />
+          <div className="home_middle_container">
+            <BalanceOverviewChart />
+            <IncomeChart />
+            <DealTypeChart />
+          </div>
         </div>
 
         <div className="home_bottom">
           <HomeBottomView />
         </div>
+      </div>
+        
     </div>
   )
 }
