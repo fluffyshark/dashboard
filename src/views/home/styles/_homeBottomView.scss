@@ -1,6 +1,15 @@
+@mixin flexCenter($content) {
+    display: flex; 
+    align-items: center; 
+    justify-content: $content;
+}
+
+
+
 .homeBottomView {
     width: 100%;
     height: 100%;
+    
 }
 
 
@@ -11,30 +20,46 @@
     height: 95px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-height: 970px) { height: calc(100% - 345px);}
+    @media screen and (max-height: 969px) { height: 66px}
+
 }
 .home_bottom_top_left {
+    display: flex; justify-content: space-between; align-items: flex-end;
     width: 295px;
     height: 100%;
     margin-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+   
 }
 .home_bottom_top_left>p {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
     margin-left: 5px;
-    transform: translateY(8px);
+    margin-bottom: 25px;
+
+    @media screen and (max-height: 969px) { 
+        scale: 0.8;
+        margin-left: -10px;
+        margin-bottom: 15px;
+    }
 }
 #home_bottom_dropdown {
+    @include flexCenter(center);
     width: 128px;
     height: 38px;
     background-color: white;
-    transform: translateY(9px);
+    margin-bottom: 20px;
     border-radius: 5px;
-    display: flex; align-items: center; justify-content: center;
     box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+
+    @media screen and (max-height: 969px) { 
+        scale: 0.8;
+        margin-bottom: 10px;
+        transform: translateX(-55px);
+    }
 }
 #home_bottom_dropdown>p {
     font-size: 12px;
@@ -48,21 +73,25 @@
 
 
 .home_bottom_top_right {
+    display: flex; align-items: flex-end; justify-content: space-between;
     width: 105px;
     height: 100%;
     margin-right: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 #home_bottom_filter {
     width: 105px;
     height: 38px;
     background-color: white;
-    transform: translateY(9px);
     border-radius: 5px;
     display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
     box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+
+    @media screen and (max-height: 969px) { 
+        scale: 0.8;
+        margin-bottom: 10px;
+        transform: translateX(10px);
+    }
 }
 #home_bottom_filter>p {
     font-size: 12px;
@@ -81,6 +110,8 @@
 .home_bottom_bottom {
     width: 100%;
     height: calc(100% - 95px);
+    background-color: #eff3f5;
+    min-height: 315px;
 
 }
 .home_bottom_client_constainer {
@@ -91,9 +122,9 @@
     border-radius: 10px;
 }
 .home_bottom_client_top {
+    @include flexCenter(space-between);
     width: 100%;
     height: 55px;
-    display: flex; align-items: center; justify-content: space-between;
     border-style: solid;
     border-color: #e5e9ec;
     border-width: 0px 0px 1px 0px;
@@ -152,22 +183,22 @@
 }
 
 .home_bottom_client_bottom {
+    @include flexCenter(space-between);
     width: 100%;
     height: 55px;
-    display: flex;
-    align-items: center; justify-content: space-between;
     border-style: solid;
     border-color: #e5e9ec;
     border-width: 0px 0px 1px 0px;
 }
 
 #client_progress_box1 {
+    @include flexCenter(center);
     width: 70px;
     height: 25px;
     border-radius: 3px;
     background-color: #4873d3;
     transform: translateY(2px);
-    display: flex; justify-content: center; align-items: center;
+    
 }
 #client_progress_box1>p {
     font-size: 12px;
@@ -176,12 +207,13 @@
 }
 
 #client_progress_box2 {
+    @include flexCenter(center);
     width: 90px;
     height: 25px;
     border-radius: 3px;
     background-color: #22c4ab;
     transform: translateY(2px);
-    display: flex; justify-content: center; align-items: center;
+    
 }
 #client_progress_box2>p {
     font-size: 12px;
@@ -190,15 +222,18 @@
 }
 
 #client_progress_box3 {
+    @include flexCenter(center);
     width: 85px;
     height: 25px;
     border-radius: 3px;
     background-color: #84d0f0;
     transform: translateY(2px);
-    display: flex; justify-content: center; align-items: center;
+    
 }
 #client_progress_box3>p {
     font-size: 12px;
     color: white;
     transform: translateY(0px);
 }
+
+

@@ -1,5 +1,4 @@
 import React from 'react'
-import "./styles/homeTopView.css"
 import icon_arrowup from "./images/icon_arrowup.png"
 import icon_arrowdown from "./images/icon_arrowdown.png"
 import AverageIncomeChart from './charts/averageIncomeChart/AverageIncomeChart'

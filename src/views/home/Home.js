@@ -1,5 +1,4 @@
 import React from 'react'
-import "./styles/home.css"
 // Components
 import BalanceOverviewChart from './charts/balanceOverviewChart/BalanceOverviewChart'
 import IncomeChart from './charts/incomeChart/IncomeChart'

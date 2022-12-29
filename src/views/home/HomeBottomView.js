@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import "./styles/homeBottomView.css"
 import dropDownArrow from "./images/dropdownArrowIcon.png"
 import filter from "./images/icon_filter.png"
 import profile_user from "../../components/navbar/images/profile_user.png" 
