@@ -18,11 +18,14 @@
 .home_bottom_top {
     width: 100%;
     height: 95px;
+    max-height: 95px;
     display: flex;
     justify-content: space-between;
 
     @media screen and (min-height: 970px) { height: calc(100% - 345px);}
     @media screen and (max-height: 969px) { height: 50px}
+
+
 
 }
 .home_bottom_top_left {
@@ -112,7 +115,6 @@
     height: calc(100% - 95px);
     background-color: #eff3f5;
     min-height: 315px;
-
 }
 .home_bottom_client_constainer {
     width: calc(100% - 40px);
@@ -123,6 +125,9 @@
 
     @media screen and (max-height: 819px) { 
         height: calc(100% - 70px);
+    }
+    @media screen and (max-height: 2000px) and (min-height: 950px) {
+        height: calc(100% - 20px);
     }
 }
 .home_bottom_client_top {

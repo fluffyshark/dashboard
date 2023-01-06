@@ -1,9 +1,32 @@
+@mixin portrait_top_standard($column, $row) {
+    @media screen and (orientation:portrait) and (max-height: 2000px) and (min-height: 1180px) {
+        grid-column: $column;
+        grid-row: $row;
+        scale: 1;
+        margin: 0;
+     }
+}
+
 .homeTopView {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (orientation:portrait) and (max-height: 2000px) and (min-height: 1180px) {
+        width: calc(100% - 20px - 20px);
+        height: calc(100% - 20px - 20px);
+        margin-left: 20px;
+        margin-left: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+        display: grid;
+        grid-template-columns: 20px 1fr 10px 1fr 10px 1fr;
+        grid-template-rows: 10px 1fr 5px 1fr 10px;
+
+    }
 }
 .home_toptop_standard {
     font-size: 11px;
@@ -25,7 +48,12 @@
 
     @media screen and (max-height: 849px) { scale: (0.8);}
     @media screen and (max-width: 1150px) { scale: (0.8);}
+
+  
 }
+
+#home_top_borrow {@include portrait_top_standard(2, 2);}
+
 .home_top_arrow_stat_top {
     width: 100%;
     height: 22px;
@@ -43,8 +71,14 @@
 .home_top_arrow_stat_bottom>img {height: 12px; transform: translateY(10px); margin-left: 10px; margin-top: 3px;}
 
 
-#home_top_annual_profit {margin-left: 0px;}
-#home_top_average_income {margin-left: 0px;}
+#home_top_annual_profit {
+    margin-left: 0px;
+    @include portrait_top_standard(4, 2);
+}
+#home_top_average_income {
+    @include portrait_top_standard(2, 4);
+    margin-left: 0px;
+}
 
 
 .home_top_graph_stat {
@@ -55,6 +89,8 @@
 
     @media screen and (max-height: 849px) { scale: (0.8);}
     @media screen and (max-width: 1150px) { scale: (0.8);}
+
+   
 }
 .home_top_graph_stat_part {
     width: 125px;
@@ -93,6 +129,10 @@
 
 /*------------LEAD CONVERSION-------------*/
 
+#home_top_lead_conversion {
+    @include portrait_top_standard(6, 2);
+}
+
 .home_top_lead_conversion {
     width: 115px;
     height: 65px;
@@ -100,6 +140,7 @@
 
     @media screen and (max-height: 849px) { scale: (0.8);}
     @media screen and (max-width: 1150px) { scale: (0.8);}
+
 }
 .home_top_lead_conversion_stat_top {
     width: 100%;
@@ -118,6 +159,8 @@
 .home_top_lead_conversion_stat_bottom>img {height: 12px; transform: translateY(10px); margin-left: 10px; margin-top: 3px;}
 
 /*------------ANNUAL DEALS-------------*/
+
+#home_top_annual_deals {@include portrait_top_standard(4, 4);}
 
 .home_top_annual_deals {
     width: 250px;

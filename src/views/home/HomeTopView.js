@@ -5,10 +5,12 @@ import AverageIncomeChart from './charts/averageIncomeChart/AverageIncomeChart'
 import AnnualDealsChart from './charts/annualDealsChart/AnnualDealsChart'
 
 function HomeTopView() {
+
+
   return (
     <div className='homeTopView'>
-
-        <div className="home_top_arrow_stat">
+        
+        <div id="home_top_borrow" className="home_top_arrow_stat">
             <div className="home_top_arrow_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>BORROWED</p></div>
             <div className="home_top_arrow_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>$25,300,000</p><img src={icon_arrowup} alt="" /></div>
         </div>
@@ -34,7 +36,7 @@ function HomeTopView() {
             </div>
         </div>
 
-        <div className="home_top_annual_deals">
+        <div id="home_top_annual_deals" className="home_top_annual_deals">
             <div className="home_top_annual_deals_stat_part">
                 <div className="home_top_annual_deals_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE DEALS</p></div>
                 <div className="home_top_annual_deals_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>10,351</p></div>
