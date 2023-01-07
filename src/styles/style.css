@@ -717,6 +717,11 @@
     margin-left: 25px;
   }
 }
+@media screen and (max-width: 800px) {
+  .navbar_left_logotype {
+    width: 100px;
+  }
+}
 
 .navbar_center {
   height: 100%;
@@ -752,6 +757,12 @@
   margin-left: 30px;
   margin-right: 30px;
   cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .navbar_center > img {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 700px) {
   .navbar_center > img {
@@ -814,9 +825,14 @@
   margin-right: 50px;
   cursor: pointer;
 }
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1180px) and (min-width: 749px) {
   #navbar_profile {
     margin-right: 30px;
+  }
+}
+@media screen and (max-width: 748px) {
+  #navbar_profile {
+    margin-right: 10px;
   }
 }
 
