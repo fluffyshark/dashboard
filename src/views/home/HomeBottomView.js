@@ -15,6 +15,13 @@ function HomeBottomView() {
   ]) 
 
 
+  const [currentWidth, setCurrentWidth] = useState(parseInt(window.screen.width))
+
+  const handleResize = () => {setCurrentWidth(window.innerWidth)}
+
+  window.addEventListener('resize', handleResize)
+
+
 
   return (
     <div className="homeBottomView">
@@ -42,11 +49,11 @@ function HomeBottomView() {
             <div className="home_bottom_client_top">
               <div className="client_category_name client_section" ><p className='client_categories'>NAME</p></div>
               <div className="client_category_progress client_section"><p className='client_categories'>PROGRESS</p></div>
-              <div className="client_category_type client_section"><p className='client_categories'>TYPE</p></div>
-              <div className="client_category_amount client_section"><p className='client_categories'>AMOUNT</p></div>
-              <div className="client_category_contact client_section"><p className='client_categories'>CONTACT</p></div>
-              <div className="client_category_created client_section"><p className='client_categories '>CREATED</p></div>
-              <div className="client_category_last_modified client_section"><p className='client_categories'>LAST MODIFIED</p></div>
+              {currentWidth > 450 &&<div className="client_category_type client_section"><p className='client_categories'>TYPE</p></div>}
+              {currentWidth > 520 &&<div className="client_category_amount client_section"><p className='client_categories'>AMOUNT</p></div>}
+              {currentWidth > 700 &&<div className="client_category_contact client_section"><p className='client_categories'>CONTACT</p></div>}
+              {currentWidth > 900 &&<div className="client_category_created client_section"><p className='client_categories '>CREATED</p></div>}
+              {currentWidth > 900 && <div className="client_category_last_modified client_section"><p className='client_categories'>LAST MODIFIED</p></div>}
             </div>
           
           <div className="home_bottom_client_wrapper">
@@ -61,11 +68,11 @@ function HomeBottomView() {
                       {client.progress === "Application" && <div id="client_progress_box3"><p className='client_categories'>{client.progress}</p></div>}
                     </div>
                   </div>
-                  <div className="client_category_type client_section"><p className='client_categories '>{client.type}</p></div>
-                  <div className="client_category_amount client_section"><p className='client_categories '>{client.amount}</p></div>
-                  <div className="client_category_contact client_section"><img className='client_profile_pic' src={profile_user} alt="" /><p className='client_categories client_contact'>{client.contact}</p></div>
-                  <div className="client_category_created client_section"><p className='client_categories '>{client.created}</p></div>
-                  <div className="client_category_last_modified client_section"><p className='client_categories '>{client.lastModified}</p></div>
+                  {currentWidth > 450 && <div className="client_category_type client_section"><p className='client_categories '>{client.type}</p></div>}
+                  {currentWidth > 520 && <div className="client_category_amount client_section"><p className='client_categories '>{client.amount}</p></div>}
+                  {currentWidth > 700 &&<div className="client_category_contact client_section"><img className='client_profile_pic' src={profile_user} alt="" /><p className='client_categories client_contact'>{client.contact}</p></div>}
+                  {currentWidth > 900 &&<div className="client_category_created client_section"><p className='client_categories '>{client.created}</p></div>}
+                  {currentWidth > 900 && <div className="client_category_last_modified client_section"><p className='client_categories '>{client.lastModified}</p></div>}
                   </div>
                 )
               })}
