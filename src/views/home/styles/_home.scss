@@ -39,14 +39,17 @@
     align-items: center;
     @media (max-height: 930px) and (min-height: 890px) {
         height: calc(100% - 685px);
-    
     } 
-    
+
     @media screen and (max-height: 889px) and (min-height: 100px) {
          height: calc(100% - 680px);
          min-height: 80px;
-    
     } 
+
+    @media screen and (max-width: 560px) {height: 260px; max-height: 275px;}
+
+   @media screen and (orientation:portrait) and (max-height: 1300px) and (min-width: 561px) {height: 210px;}
+   @media screen and (orientation:portrait) and (max-height: 1300px) and (max-width: 560px) {height: 260px;}
 
 }
 

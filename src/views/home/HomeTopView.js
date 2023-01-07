@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import icon_arrowup from "./images/icon_arrowup.png"
 import icon_arrowdown from "./images/icon_arrowdown.png"
 import AverageIncomeChart from './charts/averageIncomeChart/AverageIncomeChart'
 import AnnualDealsChart from './charts/annualDealsChart/AnnualDealsChart'
 
 function HomeTopView() {
+
+    const [currentWidth, setCurrentWidth] = useState(parseInt(window.screen.width))
+
+    const handleResize = () => {setCurrentWidth(window.innerWidth)}
+  
+    window.addEventListener('resize', handleResize)
 
 
   return (
@@ -25,27 +31,55 @@ function HomeTopView() {
             <div className="home_top_lead_conversion_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>45.13%</p><img src={icon_arrowup} alt="" /></div>
         </div>
             
-        <div id="home_top_average_income" className="home_top_graph_stat">
-            <div className="home_top_graph_stat_part">
-                <div className="home_top_graph_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE INCOME</p></div>
-                <div className="home_top_graph_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>$1,350,000</p></div>
-            </div>
-            <div className="home_top_graph_graph_part">
-                <AverageIncomeChart />
-                <p>+18%</p>
-            </div>
-        </div>
+        {currentWidth > 900 ? 
+            (
+            <div id="home_top_average_income" className="home_top_graph_stat">
+                <div className="home_top_graph_stat_part">
+                    <div className="home_top_graph_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE INCOME</p></div>
+                    <div className="home_top_graph_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>$1,350,000</p></div>
+                </div>
 
-        <div id="home_top_annual_deals" className="home_top_annual_deals">
-            <div className="home_top_annual_deals_stat_part">
-                <div className="home_top_annual_deals_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE DEALS</p></div>
-                <div className="home_top_annual_deals_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>10,351</p></div>
+                <div className="home_top_graph_graph_part">
+                    <AverageIncomeChart />
+                    <p>+18%</p>
+                </div>
             </div>
-            <div className="home_top_annual_deals_graph_part">
-                <AnnualDealsChart />
-                <p>-12%</p>
+            ) : (
+            <div id="home_top_average_income_small" className="home_top_arrow_stat">
+                <div className="home_top_arrow_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE INCOME</p></div>
+                <div className="home_top_arrow_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>$1,350,000</p><img src={icon_arrowup} alt="" /></div>
             </div>
-        </div>
+            )
+
+           
+
+        
+         }
+
+
+        {currentWidth > 900 ? 
+            (
+            <div id="home_top_annual_deals" className="home_top_annual_deals">
+                <div className="home_top_annual_deals_stat_part">
+                    <div className="home_top_annual_deals_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE DEALS</p></div>
+                    <div className="home_top_annual_deals_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>10,351</p></div>
+                </div>
+        
+                <div className="home_top_annual_deals_graph_part">
+                    <AnnualDealsChart />
+                    <p>-12%</p>
+                </div>
+                
+            </div>
+
+            ) : (
+
+            <div id="home_top_annual_deals_small" className="home_top_arrow_stat">
+                <div className="home_top_arrow_stat_top home_toptop_standard"><p className='home_top_arrow_stat_title'>AVERAGE DEALS</p></div>
+                <div className="home_top_arrow_stat_bottom home_topbottom_standard"><p className='home_top_arrow_stat_amount'>10,351</p><img src={icon_arrowdown} alt="" /></div>
+            </div>
+            )
+        }
 
     </div>
   )

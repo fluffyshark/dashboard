@@ -42,6 +42,22 @@
     min-height: 80px;
   }
 }
+@media screen and (max-width: 560px) {
+  .home_top {
+    height: 260px;
+    max-height: 275px;
+  }
+}
+@media screen and (orientation: portrait) and (max-height: 1300px) and (min-width: 561px) {
+  .home_top {
+    height: 210px;
+  }
+}
+@media screen and (orientation: portrait) and (max-height: 1300px) and (max-width: 560px) {
+  .home_top {
+    height: 260px;
+  }
+}
 
 /*------------HOME MIDDLE-------------*/
 .home_middle {
@@ -387,10 +403,11 @@
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   .homeTopView {
     width: calc(100% - 20px - 20px);
     height: calc(100% - 20px - 20px);
+    min-height: 160px;
     margin-left: 20px;
     margin-left: 20px;
     border-radius: 10px;
@@ -399,6 +416,12 @@
     display: grid;
     grid-template-columns: 20px 1fr 10px 1fr 10px 1fr;
     grid-template-rows: 10px 1fr 5px 1fr 10px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .homeTopView {
+    grid-template-columns: 20px 1fr 10px 1fr;
+    grid-template-rows: 10px 1fr 5px 1fr 5px 1fr 10px;
   }
 }
 
@@ -432,10 +455,19 @@
   }
 }
 
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   #home_top_borrow {
     grid-column: 2;
     grid-row: 2;
+    scale: 1;
+    margin: 0;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
+  #home_top_average_income_small {
+    grid-column: 2;
+    grid-row: 4;
     scale: 1;
     margin: 0;
   }
@@ -473,7 +505,7 @@
 #home_top_annual_profit {
   margin-left: 0px;
 }
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   #home_top_annual_profit {
     grid-column: 4;
     grid-row: 2;
@@ -485,7 +517,7 @@
 #home_top_average_income {
   margin-left: 0px;
 }
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   #home_top_average_income {
     grid-column: 2;
     grid-row: 4;
@@ -557,10 +589,18 @@
 }
 
 /*------------LEAD CONVERSION-------------*/
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   #home_top_lead_conversion {
     grid-column: 6;
     grid-row: 2;
+    scale: 1;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 560px) and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
+  #home_top_lead_conversion {
+    grid-column: 2;
+    grid-row: 6;
     scale: 1;
     margin: 0;
   }
@@ -612,8 +652,17 @@
 }
 
 /*------------ANNUAL DEALS-------------*/
-@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 1180px) {
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
   #home_top_annual_deals {
+    grid-column: 4;
+    grid-row: 4;
+    scale: 1;
+    margin: 0;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-height: 2000px) and (min-height: 600px) {
+  #home_top_annual_deals_small {
     grid-column: 4;
     grid-row: 4;
     scale: 1;

@@ -14,12 +14,7 @@ function Navbar() {
   const [currentWidth, setCurrentWidth] = useState(window.screen.width)
   const [profileName, setProfileName] = useState("Sebastian Robin Yjord")
 
-  const handleResize = () => {
-    // put your logic here
-    setCurrentWidth(window.innerWidth)
-  }
-
-  console.log(currentWidth)
+  const handleResize = () => {setCurrentWidth(window.innerWidth)}
   
   window.addEventListener('resize', handleResize)
 
