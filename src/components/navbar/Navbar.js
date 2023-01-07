@@ -12,6 +12,7 @@ import icon_activity_log from "./images/icon_activity_log.png"
 function Navbar() {
 
   const [currentWidth, setCurrentWidth] = useState(window.screen.width)
+  const [profileName, setProfileName] = useState("Sebastian Robin Yjord")
 
   const handleResize = () => {
     // put your logic here
@@ -22,6 +23,43 @@ function Navbar() {
   
   window.addEventListener('resize', handleResize)
 
+
+
+
+  const limited_profile_name = () => {
+
+    let name = profileName
+    
+    let fullNameArray = name.split(" ");
+
+    let letterCount = fullNameArray.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.length;
+    }, 0);
+
+    let maxLetters = () => {
+      let size = 15
+      if (currentWidth < 825) {size = 10}
+      if (currentWidth < 749) {size = 0}
+
+      return size
+    }
+
+    const nameCounts = fullNameArray.length
+
+    for (let i = 0; i < nameCounts; i++) {
+      if (letterCount > maxLetters()) {fullNameArray.pop()}
+
+      letterCount = fullNameArray.reduce((accumulator, currentValue) => {return accumulator + currentValue.length;}, 0);
+
+    }
+
+    name = fullNameArray.join(" ");
+
+    return name
+  }
+
+
+ 
 
   
 
@@ -65,7 +103,7 @@ function Navbar() {
         <div className="navbar_right">
             <div id="navbar_mail"><img src={icon_mail} alt="" /></div>
             <div id="navbar_bell"><img src={icon_bell} alt="" /></div>
-            <div id="navbar_profile"><img src={profile_user} alt="" /><p>Robin Yjord</p></div>
+            <div id="navbar_profile"><img src={profile_user} alt="" /><p>{limited_profile_name()}</p></div>
         </div>
     </div>
   )
